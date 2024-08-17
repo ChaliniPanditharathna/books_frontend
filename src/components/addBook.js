@@ -5,16 +5,16 @@ import axios from 'axios';
 const backend_url = process.env.REACT_APP_BACKEND_URL;
 
 export default function AddBook() {
-  const [title, setOnChangeTitle] = useState(``);
-  const [author, setOnChangeAuthor] = useState(``);
+  const [bookTitle, setOnChangeTitle] = useState(``);
+  const [bookAuthor, setOnChangeAuthor] = useState(``);
   const [description, setOnChangeDescription] = useState(``);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     const book = { 
-      title: title,
-      author: author,
+      bookTitle: bookTitle,
+      bookAuthor: bookAuthor,
       description: description
     };
 
@@ -44,7 +44,7 @@ export default function AddBook() {
                   placeholder="Title of the Book"
                   name="title"
                   className="form-control"
-                  value={title}
+                  value={bookTitle}
                   onChange={(e) => setOnChangeTitle(e.target.value)}
                   spellCheck="false"
                   data-ms-editor="true"
@@ -57,7 +57,7 @@ export default function AddBook() {
                   placeholder="Author"
                   name="author"
                   className="form-control"
-                  value={author}
+                  value={bookAuthor}
                   onChange={(e) => setOnChangeAuthor(e.target.value)}
                   spellCheck="false"
                   data-ms-editor="true"

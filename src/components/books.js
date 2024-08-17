@@ -30,8 +30,8 @@ const Book = (props) => (
       height="200"
     />
     <div className="desc">
-      <h2><a href="#" onClick={() => { props.editBook(props.keyt); }}>{props.title}</a></h2>
-      <h3>{props.author}</h3>
+      <h2><a href="#" onClick={() => { props.editBook(props.keyt); }}>{props.bookTitle}</a></h2>
+      <h3>{props.bookAuthor}</h3>
       <p>{props.description}
         <button className='btn btn-danger delete' onClick={() => { props.deleteBook(props.keyt); }}>X</button>
       </p>
